@@ -16,6 +16,7 @@
 }
 
 /* Step 2 */
+/* Edit the body element to use the Poppins font (using Google fonts) with serif as a backup.  It should also use the image “concrete_seamless.png” as a background-image with a backup color of #f1f1f1. */
 
 body {
   font-family: 'Poppins', serif;
@@ -24,6 +25,7 @@ body {
 }
 
 /* Step 3*/
+/* Edit the css for the header tag (all instances) to use flex */
 
 header {
   display: flex;
@@ -33,6 +35,7 @@ header {
 }
 
 /* Step 4 */
+/* Edit the css for the nav_links class to use flex to match our example. Do not modify the list items or the links - modify the nav_links class to use flex.  */
 
 .nav_links {
   display: flex;
@@ -40,6 +43,7 @@ header {
 }
 
 /* Step 5*/
+/* Style the links so that they have the same color even after they have been visited. */
 
 a:link {
   color: blue;
@@ -52,6 +56,11 @@ a:visited {
 }
 
 /* Step 6 */
+/* Identify the proper selector to style ONLY those header elements that are direct children of a card class.  The required styling is the following: 
+background: #288088,
+solid 2px border using #45ADAD,
+20px of padding on the top and the bottom, 
+50px border-radius on the top left and right corners.  */
 
 .card{
   display: flex;
@@ -69,12 +78,14 @@ a:visited {
 }
 
 /* Step 7 */
+/* Edit the css for the card class to match our example. Achieve this by using a flex-property to specify an initial “size” of 450px.  You need to think about this from a “flex” perspective and realize that flex-direction will affect the size of the elements.  */
 
 .card {
   flex-basis: 450px;
 }
 
 /* Step 8 */
+/* Edit the css for the pricing class to match our example. You should use flex and the cards should be centered both horizontally and vertically. */
 
 .pricing {
   display: flex;
@@ -84,6 +95,7 @@ a:visited {
 }
 
 /* Step 9 */
+/* Style the images in the gallery class. These elements will have a solid 10px border with a color of #50C7C7, 10px margin on all four sides and a width of 300px. */
 
 .gallery img {
   border: 10px solid #50C7C7;
@@ -92,6 +104,7 @@ a:visited {
 }
 
 /* Step 10 */
+/* Edit the css for the gallery class to use flex to match our example. (You may want to look at the screen shots from 1200px and 1500px as well -  the changes are not from media queries, but from the use of flex.) */
 
 .gallery {
   display: flex;
@@ -103,6 +116,7 @@ a:visited {
 
 @media (min-width: 900px){
   /* Step 11 */
+  /* Edit the css for the header tag (all instances) and the nav_links class to match our example using flex-properties. The logo should be as far to the left as possible and the links as far to the right as possible. Use flex properties, NOT position properties. */
 
   header {
     flex-direction: row;
@@ -115,6 +129,7 @@ a:visited {
   }
 
   /* Step 12 */
+  /* Edit the css for the pricing and card classes to match our example. Part of achieving this is by using a flex-property to specify a “size” of 275px. Notice that the elements do not have the same height, but do have the same width. */
 
   /* .pricing {
     justify-content: center;
@@ -125,6 +140,7 @@ a:visited {
   }
 
   /* Step 13 */
+  /* Modify the first header (the one not inside main) so that it remains visible at the top of the screen even as we scroll down. Make sure that it is always visible.  */
 
   body>header {
     position: fixed;
@@ -143,6 +159,7 @@ a:visited {
 
 @media (prefers-reduced-motion: reduce){
   /* Step 14 */
+  /* The logo should appear but not be animated if prefers-reduced-motion is selected in the accessibility preferences.  */
   
   #logo {
     animation: none;
@@ -154,18 +171,21 @@ a:visited {
 
 @media print and (orientation: portrait){
   /* Step 15 */
+  /* Change the font on your body to Arial with a backup value of  Helvetica */
 
   body {
     font-family: Arial, Helvetica;
   }
 
   /* Step 16 */
+  /* The background image should be removed. */
 
   body {
     background-image: none;
   }
 
   /* Step 17 */
+  /* Edit the nav/nav_links elements so that they are spaced according to the image above. */
 
   header {
     flex-direction: column;
@@ -181,6 +201,7 @@ a:visited {
   }
 
   /* Step 18 */
+  /* Edit the pricing class so that the elements align along the bottom.  As long as it aligns along the bottom we don't care if the cards aren't the same height. */
 
   .pricing {
     align-items: flex-end;
@@ -189,6 +210,7 @@ a:visited {
   }
 
   /* Step 19 */
+  /* The card elements should have a solid border 2px of #45ADDD and use flex-basis of 325px. */
 
   .card {
     border: 2px solid #45ADDD;
@@ -196,6 +218,7 @@ a:visited {
   }
 
   /* Step 20 */
+  /* No part of the gallery should be visible. */
 
   #gallery {
     display: none;
@@ -206,6 +229,7 @@ a:visited {
   }
 
   /* Step 21 */
+  /* Without using list-style-type add the thumbs up entity as shown in the cards.  */
 
   .card ul li:nth-child(2)::after {
     content: "\1F44D";
